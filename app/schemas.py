@@ -1,4 +1,3 @@
-from multiprocessing.reduction import steal_handle
 from typing import Optional
 from pydantic import BaseModel, EmailStr
 from datetime import datetime
