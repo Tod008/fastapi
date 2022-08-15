@@ -5,7 +5,6 @@ Revises: 3d614feeb3d8
 Create Date: 2022-08-14 07:03:06.006327
 
 """
-from tkinter import CASCADE
 from alembic import op
 import sqlalchemy as sa
 
@@ -20,7 +19,7 @@ depends_on = None
 def upgrade() -> None:
     op.add_column('posts', sa.Column('owner_id', sa.Integer(), nullable=False))
     op.create_foreign_key('posts_users_fk', source_table='posts', referent_table='users', local_cols=[
-                          'owner_id'], remote_cols=['id'], ondelete=CASCADE)
+                          'owner_id'], remote_cols=['id'], ondelete='cascade')
     pass
 
 
