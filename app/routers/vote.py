@@ -1,4 +1,3 @@
-from msilib import schema
 from os import stat
 from fastapi import FastAPI, Response, status, HTTPException, Depends, APIRouter
 from .. import schemas, database, models, oauth2
